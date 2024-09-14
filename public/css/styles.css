@@ -1,0 +1,24 @@
+header {
+    background-color: #d58a94;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+}
