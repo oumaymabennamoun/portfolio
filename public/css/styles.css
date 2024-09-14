@@ -1,5 +1,6 @@
 header {
-    background-color: #d58a94;
+    background-color: #c07384;
+    color: white;
     width: 100%;
     position: fixed;
     align-items: center;
@@ -21,4 +22,5 @@ nav li {
 
 nav a {
     text-decoration: none;
+    color: white;
 }
