@@ -24,3 +24,20 @@ nav a {
     text-decoration: none;
     color: white;
 }
+
+footer {
+    background-color: #c07384;
+    color: white;
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.icons {
+    fill: white;
+    width: 30px;
+    height: 30px;
+}
