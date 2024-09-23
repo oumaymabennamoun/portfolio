@@ -34,6 +34,10 @@ nav a {
     color: white;
 }
 
+#home {
+    margin-top: 100px; /* to adjust + add mobile responsiveness */
+}
+
 footer {
     background-color: #c07384;
     color: white;
