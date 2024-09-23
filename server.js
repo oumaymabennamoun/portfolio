@@ -22,14 +22,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
     fs.readFile(path.join(__dirname, "views", "index.html"), "utf-8", (err, content) => {
-        if (err) return res.status(500).send("Error loading home page");
-        res.send(res.locals.header + content + res.locals.footer);
-    });
-});
-
-app.get("/", (req,res) => {
-    ejs.renderFile(path.join(__dirname, "views", "partials", "footer.ejs"), "utf8", (err, content) => {
-        if (err) return res.status(500).send("Error loading projects page");
+        if (err) return res.status(500).send("Error loading site");
         res.send(res.locals.header + content + res.locals.footer);
     });
 });
