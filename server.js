@@ -27,6 +27,13 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/projects", (req, res) => {
+    fs.readFile(path.join(__dirname, "views", "projects.html"), "utf-8", (err, content) => {
+        if (err) return res.status(500).send("Error loading projects");
+        res.send(res.locals.header + content + res.locals.footer);
+    });
+});
+
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });

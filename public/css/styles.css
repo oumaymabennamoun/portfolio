@@ -34,8 +34,36 @@ nav a {
     color: white;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 #home {
     margin-top: 100px; /* to adjust + add mobile responsiveness */
+}
+
+#projects {
+    background-color: #c07384;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+}
+
+#projects a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+#interests {
+    color: #c07384;
+    text-align: center;
+    padding: 5px;
 }
 
 footer {
