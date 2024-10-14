@@ -54,7 +54,9 @@ body {
     letter-spacing: 0.5px;
     background-image: radial-gradient(circle at center, #e99ca8, #fff4f6);
     background-repeat: no-repeat;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #home {
@@ -85,8 +87,8 @@ body {
 
 footer {
     color: #c07384;
+    background-color: black;
     width: 100%;
-    position: fixed;
     text-align: center;
     left: 0;
     right: 0;
