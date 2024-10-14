@@ -1,6 +1,5 @@
 header {
-    background-color: #c07384;
-    color: white;
+    color: #c07384;
     width: 100%;
     position: fixed;
     align-items: center;
@@ -9,11 +8,22 @@ header {
     left: 0;
     display: flex;
     justify-content: space-between;
+    background-color: transparent; 
     transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+header.scroll {
+    background-color: black;
 }
 
 h1 {
     margin: 0;
+}
+
+h1 a {
+    text-decoration: none;
+    color: #c07384;
 }
 
 nav ul {
@@ -31,12 +41,20 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #c07384;
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: #fff4f6;
+    font-family: "Inconsolata", monospace;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background-image: radial-gradient(circle at center, #e99ca8, #fff4f6);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 #home {
@@ -44,8 +62,7 @@ body {
 }
 
 #projects {
-    background-color: #c07384;
-    color: white;
+    color: #c07384;
     text-align: center;
     margin: 0;
     padding: 5px;
@@ -55,8 +72,8 @@ body {
 
 #projects a {
     text-decoration: none;
-    color: white;
-    border: 1px solid white;
+    color: #c07384;
+    border: 1px solid #c07384;
     padding: 5px;
 }
 
@@ -67,8 +84,7 @@ body {
 }
 
 footer {
-    background-color: #c07384;
-    color: white;
+    color: #c07384;
     width: 100%;
     position: fixed;
     text-align: center;
@@ -78,7 +94,7 @@ footer {
 }
 
 .icons {
-    fill: white;
+    fill: #c07384;;
     width: 30px;
     height: 30px;
 }
