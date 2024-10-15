@@ -135,6 +135,31 @@ body {
     margin: 20px;
 }
 
+.plus {
+    display: inline-block; 
+    transition: transform 0.4s ease, opacity 0.3s ease; 
+    opacity: 0;
+}
+
+.skills:hover .plus { 
+    animation: pop-up 0.4s forwards; 
+    opacity: 1; 
+}
+
+@keyframes pop-up {
+    0% {
+        transform: scale(1) rotate(0deg); 
+        opacity: 1; 
+    }
+    50% {
+        transform: scale(1.5) rotate(90deg); 
+    }
+    100% {
+        transform: scale(1) rotate(180deg); 
+        opacity: 1; 
+    }
+}
+
 .projects-page {
     margin-top: 200px;
     color: black;
@@ -152,9 +177,15 @@ body {
 .skills {
     background-color: #e99ca8;
     border-radius: 20px;
-    padding: 5px;
+    padding: 10px;
+    padding-left: 15px;
     display: inline-block;
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skills:hover {
+    transform: scale(1.1);
 }
 
 footer {
