@@ -1,5 +1,5 @@
 header {
-    color: #c07384;
+    color: black;
     width: 100%;
     position: fixed;
     align-items: center;
@@ -14,7 +14,7 @@ header {
 }
 
 header.scroll {
-    background-color: black;
+    background-color: #c07384;
 }
 
 h1 {
@@ -23,7 +23,7 @@ h1 {
 
 h1 a {
     text-decoration: none;
-    color: #c07384;
+    color: black;
 }
 
 nav ul {
@@ -41,30 +41,41 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #c07384;
+    color: black;
 }
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     background-color: #fff4f6;
     font-family: "Inconsolata", monospace;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    background-image: radial-gradient(circle at center, #e99ca8, #fff4f6);
+    background-image: radial-gradient(circle at center, #e99ca8, #fff4f6), url("/images/grain.png");
+    background-size: cover;
+    background-blend-mode: multiply;
     background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 #home {
-    margin-top: 100px; /* to adjust + add mobile responsiveness */
+    margin-top: 200px; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 35px;
 }
 
 #projects {
-    color: #c07384;
+    color: black;
     text-align: center;
     margin: 0;
     padding: 5px;
@@ -75,28 +86,54 @@ body {
 #projects a {
     text-decoration: none;
     color: #c07384;
-    border: 1px solid #c07384;
-    padding: 5px;
 }
 
-#interests {
-    color: #c07384;
+.project-1 {
+    border: 1px solid #c07384;
+    padding: 10px;
+    padding-top: 20px;
+    margin: 20px;
+}
+
+.projects-page {
+    margin-top: 200px;
+    color: black;
     text-align: center;
     padding: 5px;
+    width: 100%;
+    height: auto;
+}
+
+.projects-page a {
+    text-decoration: none;
+    color: #c07384;
+}
+
+.skills {
+    background-color: #e99ca8;
+    border-radius: 20px;
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
 }
 
 footer {
-    color: #c07384;
-    background-color: black;
+    color: black;
+    background-color: #c07384;
     width: 100%;
     text-align: center;
     left: 0;
     right: 0;
     bottom: 0;
+    padding-bottom: 20px;
 }
 
 .icons {
-    fill: #c07384;;
+    fill: black;
     width: 30px;
     height: 30px;
+}
+
+footer a {
+    text-decoration: none;
 }
