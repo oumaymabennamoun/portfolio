@@ -1,36 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
 header {
     color: black;
-    width: 100%;
+    background-color: transparent;
     position: fixed;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 20px;
+    display: flex;
     top: 0;
     left: 0;
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent; 
-    transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 20px 20px;
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
 header.scroll {
-    background-color: #c07384;
+    background-color: #D18E97;
 }
 
-h1 {
+h2 {
     margin: 0;
 }
 
-h1 a {
-    text-decoration: none;
+h2 a {
     color: black;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+h2 a:hover {
+    color: rgb(253, 164, 209);
+    text-shadow: 0 0 8px rgb(253, 164, 209); 
+}
+
+header.scroll h2 a:hover {
+    color: rgb(253, 164, 209);
+    text-shadow: 0 0 8px rgb(253, 164, 209), 0 0 5px rgba(255, 105, 180, 1); 
 }
 
 nav ul {
     list-style-type: none;
     text-align: right;
-    margin: 0;
     padding: 0;
+    margin: 0;
     margin-right: 30px;
 }
 
@@ -40,11 +55,11 @@ nav li {
 }
 
 nav a {
-    text-decoration: none;
     color: black;
+    position: relative; 
+    text-decoration: none;
     border-radius: 20px; 
     transition: color 0.3s ease; 
-    position: relative; 
 }
 
 nav a:hover {
@@ -92,7 +107,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    background-image: radial-gradient(circle at center, #e99ca8, #fff4f6), url("/images/grain.png");
+    background-image: /* radial-gradient(at right, #DA969F, #F5E2E5, #FFFFFF), */ url("/images/noise.png");
     background-size: cover;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
@@ -104,10 +119,6 @@ body {
 
 #home {
     margin-top: 200px; 
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .content {
@@ -125,11 +136,11 @@ body {
 
 #projects a {
     text-decoration: none;
-    color: #c07384;
+    color: black;
 }
 
 .project-1 {
-    border: 1px solid #c07384;
+    border: 1px solid black;
     padding: 10px;
     padding-top: 20px;
     margin: 20px;
@@ -175,7 +186,8 @@ body {
 }
 
 .skills {
-    background-color: #e99ca8;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 130, 178, 0.1);
     border-radius: 20px;
     padding: 10px;
     padding-left: 15px;
@@ -190,7 +202,7 @@ body {
 
 footer {
     color: black;
-    background-color: #c07384;
+    background-color: #D18E97;
     width: 100%;
     text-align: center;
     left: 0;
@@ -203,6 +215,13 @@ footer {
     fill: black;
     width: 30px;
     height: 30px;
+    margin: 5px;
+    transition: fill 0.3s ease, filter 0.3s ease; 
+}
+
+.icons:hover {
+    fill: rgb(253, 164, 209);
+    filter: drop-shadow(2px 2px 8px rgba(253, 164, 209));
 }
 
 footer a {
