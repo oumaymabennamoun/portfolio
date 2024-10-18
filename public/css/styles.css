@@ -121,6 +121,7 @@ header.scroll nav a:hover::after {
     nav li {
         margin-left: 0;
         margin-right: 20px;
+        margin-top: 15px;
     }
 }
 
@@ -207,21 +208,22 @@ body {
 
 .projects-page a {
     text-decoration: none;
-    color: #c07384;
+    color: black;
 }
 
-.skills {
+.tags {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 130, 178, 0.1);
     border-radius: 20px;
     padding: 10px;
     padding-left: 15px;
+    text-decoration: none;
     display: inline-block;
     text-align: center;
     transition: transform 0.3s ease;
 }
 
-.skills:hover {
+.tags:hover {
     transform: scale(1.1);
 }
 
@@ -249,6 +251,13 @@ footer {
     fill: #ECC8CC;
     filter: drop-shadow(0px 0px 5px #BE7B84);
     filter: drop-shadow(2px 2px 20px #ECC8CC);
+}
+
+.tag-icon {
+    fill: black;
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
 }
 
 footer a {
