@@ -16,6 +16,7 @@ header {
     padding: 20px 40px;
     z-index: 1;
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    transform: translateY(0);
 }
 
 header.scroll {
@@ -104,6 +105,11 @@ header.scroll nav a:hover::after {
     display: none; 
 }
 
+main {
+    flex: 1;
+    padding: 20px;
+}
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -136,8 +142,8 @@ body {
     background-image: /* radial-gradient(at right, #DA969F, #F5E2E5, #FFFFFF), */ url("/images/noise.png");
     background-size: cover;
     background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    background-repeat: repeat;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: scroll;
@@ -233,10 +239,8 @@ footer {
     border-top: 2px solid black;
     width: 100%;
     text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
     padding: 10px 40px 25px;
+    position: relative;
 }
 
 .icons {
