@@ -8,6 +8,8 @@ window.addEventListener("scroll", () => {
     }
 });
 
+const displayMessage = document.getElementById("message");
+
 const getQueryParameter = (param) => {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
@@ -26,8 +28,10 @@ if (tag) {
             item.style.display = "none"; 
         }
     });
+    displayMessage.textContent = `Displaying all projects that contain "${tag}"`;
 } else {
     document.querySelectorAll("div[filter-tags]").forEach(item => {
         item.style.display = "block";
     });
+    displayMessage.textContent = `Displaying all projects`;
 }
