@@ -184,7 +184,7 @@ body {
     opacity: 0;
 }
 
-.skills:hover .plus { 
+.tags:hover .plus { 
     animation: pop-up 0.4s forwards; 
     opacity: 1; 
 }
@@ -255,13 +255,6 @@ footer {
     fill: #ECC8CC;
     filter: drop-shadow(0px 0px 5px #BE7B84);
     filter: drop-shadow(2px 2px 20px #ECC8CC);
-}
-
-.tag-icon {
-    fill: black;
-    width: 25px;
-    height: 25px;
-    margin-bottom: -5px;
 }
 
 footer a {
