@@ -30,6 +30,9 @@ header {
 header.scroll {
     background-color: #D18E97;
     border-bottom: 2px solid black;
+    background-image: url("/images/texture.png");
+    background-size: cover;
+    background-blend-mode: multiply;
 }
 
 h1 {
@@ -147,7 +150,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    background-image: url("/images/noise.png");
+    background-image: url("/images/texture.png");
     background-size: cover;
     background-blend-mode: multiply;
     background-repeat: repeat;
@@ -245,6 +248,9 @@ footer {
     color: black;
     background-color: #D18E97;
     border-top: 2px solid black;
+    background-image: url("/images/texture.png");
+    background-size: cover;
+    background-blend-mode: multiply;
     width: 100%;
     padding: 30px 40px 30px;
     position: relative;
