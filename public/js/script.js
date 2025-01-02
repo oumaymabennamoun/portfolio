@@ -35,3 +35,10 @@ if (tag) {
     });
     displayMessage.textContent = `Displaying all projects`;
 }
+
+const backToTopButton = document.getElementById("backToTop");
+
+function scrollFunction() {
+    document.body.scrollTop = 0; 
+    document.documentElement.scrollTop = 0;
+}

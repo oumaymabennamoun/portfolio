@@ -290,6 +290,17 @@ footer {
     align-items: center;
 }
 
+#backToTop {
+    position: absolute;
+    bottom: 185px;
+    right: 50px;
+    background-color: rgb(255, 130, 178, 0.1);
+    border-radius: 20px;
+    border-style: none;
+    font-size: 18px;
+    font-family: "Inconsolata", monospace;
+}
+
 .links {
     position: absolute;  
     top: 50%; 
