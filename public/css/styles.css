@@ -157,7 +157,38 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-button:single-button {
+    display: block;
+    border-style: solid;
+    height: 10px;
+    width: 12px;
+  }
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent #000000 transparent;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    border-width: 6px 6px 0 6px;
+    border-color: #000000 transparent transparent transparent;
 }
 
 #home {
