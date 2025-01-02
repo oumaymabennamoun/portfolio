@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background: pink;
+}
+
 header {
     color: black;
     background-color: transparent;
@@ -138,12 +142,12 @@ main {
 body {
     margin: 0;
     padding: 0px;
-    background-color: #F5E2E5;
+    background-color: #F2F2F2;
     font-family: "Inconsolata", monospace;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.5px;
-    background-image: /* radial-gradient(at right, #DA969F, #F5E2E5, #FFFFFF), */ url("/images/noise.png");
+    background-image: url("/images/noise.png");
     background-size: cover;
     background-blend-mode: multiply;
     background-repeat: repeat;
@@ -242,9 +246,28 @@ footer {
     background-color: #D18E97;
     border-top: 2px solid black;
     width: 100%;
-    text-align: center;
-    padding: 10px 40px 25px;
+    padding: 30px 40px 30px;
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    position: absolute;  
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+.copyright {
+    text-align: right;
 }
 
 .icons {

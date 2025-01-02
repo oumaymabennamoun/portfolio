@@ -29,13 +29,20 @@ app.get("/", (req, res) => {
 
 app.get("/projects", (req, res) => {
     fs.readFile(path.join(__dirname, "views", "projects.html"), "utf-8", (err, content) => {
-        if (err) return res.status(500).send("Error loading projects page");
+        if (err) return res.status(500).send("Error loading all projects");
         res.send(res.locals.header + content + res.locals.footer);
     });
 });
 
 app.get("/my-portfolio", (req, res) => {
-    fs.readFile(path.join(__dirname, "views", "my-portfolio.html"), "utf-8", (err, content) => {
+    fs.readFile(path.join(__dirname, "views", "projects", "my-portfolio.html"), "utf-8", (err, content) => {
+        if (err) return res.status(500).send("Error loading project");
+        res.send(res.locals.header + content + res.locals.footer);
+    });
+});
+
+app.get("/bioinformatics-problems", (req, res) => {
+    fs.readFile(path.join(__dirname, "views", "projects", "bioinformatics-problems.html"), "utf-8", (err, content) => {
         if (err) return res.status(500).send("Error loading project");
         res.send(res.locals.header + content + res.locals.footer);
     });
