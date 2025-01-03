@@ -19,8 +19,8 @@ const getQueryParameter = (param) => {
 const tag = getQueryParameter("tag");
 
 if (tag) {
-    document.querySelectorAll("div[filter-tags]").forEach(item => {
-        const tags = item.getAttribute("filter-tags").split(",");
+    document.querySelectorAll("div[skills]").forEach(item => {
+        const tags = item.getAttribute("skills").split(",");
 
         if (tags.includes(tag)) {
             item.style.display = "block"; 
@@ -28,17 +28,17 @@ if (tag) {
             item.style.display = "none"; 
         }
     });
-    displayMessage.textContent = `Displaying all projects that contain "${tag}"`;
+    displayMessage.innerHTML = `Displaying projects that contain "${tag}". <a href="/projects">Browse all projects</a>.`;
 } else {
-    document.querySelectorAll("div[filter-tags]").forEach(item => {
+    document.querySelectorAll("div[skills]").forEach(item => {
         item.style.display = "block";
     });
-    displayMessage.textContent = `Displaying all projects`;
+    displayMessage.textContent = `Displaying all projects.`;
 }
 
-const backToTopButton = document.getElementById("backToTop");
+const backToTopButton = document.getElementById("top");
 
-function scrollFunction() {
+function backToTop() {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0;
 }
