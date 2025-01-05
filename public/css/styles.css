@@ -22,7 +22,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 40px;
+    padding: 20px 48px;
     z-index: 1;
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
     transform: translateY(0);
@@ -58,33 +58,64 @@ header.scroll h1 a:hover {
     text-shadow: 0px 0px 2px #BE7B84, 2px 2px 20px #ECC8CC;
 }
 
+#star {
+    font-size: 33px;
+    position: absolute;  
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);  
+    text-align: center;
+    display: inline-block;
+    transition: color 0.3s ease-in-out; 
+}
+
+#star:hover {
+    animation: starColours 3s infinite; 
+}
+
+/*
+@keyframes starColours {
+    0% {
+      color: first;
+    }
+    33% {
+      color: second;
+    }
+    66% {
+      color: third;
+    }
+    100% {
+      color: first;
+    }
+}
+*/
+
 nav ul {
     list-style-type: none;
     text-align: right;
     padding: 0;
     margin: 0;
-    margin-right: 30px;
-    display: flex;
 }
 
 nav li {
     display: inline-block;
-    margin: 10px;
+    margin-left: 20px;
 }
 
 nav a {
     color: black;
     position: relative; 
     text-decoration: none;
-    border-radius: 20px; 
-    transition: color 0.3s ease; 
+    /* border-radius: 20px; */
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #170F10;
-    text-shadow: 0 0 5px #E17D8B;
+    color: black;
+    text-shadow: 0 0 8px #FA6479;
 }
 
+/*
 nav a::after {
     content: "";
     position: absolute;
@@ -92,7 +123,7 @@ nav a::after {
     left: 50%;
     width: 125%;
     height: 125%;
-    background-color: rgba(216, 85, 118, 0.5);
+    background-color: #E17D8B;
     border-radius: 20px;
     transform: translate(-50%, -50%) scale(0); 
     transition: transform 0.3s ease; 
@@ -104,6 +135,11 @@ nav a:hover::after {
     transform: translate(-50%, -50%) scale(1); 
 }
 
+header.scroll nav a:hover::after {
+    display: none; 
+}
+*/
+
 header.scroll nav a {
     background: none; 
 }
@@ -113,44 +149,27 @@ header.scroll nav a:hover {
     text-shadow: 0px 0px 2px #BE7B84, 2px 2px 20px #ECC8CC;
 }
 
-header.scroll nav a:hover::after {
-    display: none; 
+header.scroll #star:hover {
+    animation: starColours 3s infinite; 
 }
 
 main {
-    flex: 1;
-    padding: 20px;
-}
-
-.nav-container {
-    display: flex;
-    justify-content: flex-end;
-}
-
-@media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    nav ul {
-        display: block;
-    }
+    padding: 50px;
 }
 
 body {
     margin: 0;
-    padding: 0px;
+    padding: 0;
     background-color: #F2F2F2;
     font-family: "Inconsolata", monospace;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 500;
     letter-spacing: 0.5px;
     background-image: url("/images/texture.png");
     background-size: cover;
     background-blend-mode: multiply;
     background-repeat: repeat;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
@@ -159,10 +178,6 @@ body {
 
 #home {
     margin-top: 200px; 
-}
-
-.content {
-    padding: 35px;
 }
 
 ::-webkit-scrollbar {
@@ -197,9 +212,8 @@ body {
 
 .name {
     font-family: "Playfair Display", serif;
-    text-align: right;
-    font-size: 48px;
-    font-weight: 600;
+    font-size: 65px;
+    font-weight: 800;
     margin: 0;
     background-image: linear-gradient(
         to right,
@@ -313,10 +327,7 @@ body {
 }
 
 #top {
-    position: absolute;
-    bottom: 185px;
-    right: 50px;
-    background-color: rgb(255, 130, 178, 0.1);
+    background: transparent;
     border-radius: 20px;
     border-style: none;
     font-size: 18px;
@@ -324,6 +335,7 @@ body {
 }
 
 footer {
+    margin: 0;
     color: black;
     background-color: #D18E97;
     border-top: 2px solid black;
@@ -331,11 +343,13 @@ footer {
     background-size: cover;
     background-blend-mode: multiply;
     width: 100%;
-    padding: 30px 40px 30px;
+    padding: 0 48px 0;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
+    min-height: 23vh;
 }
 
 footer a {
@@ -348,7 +362,7 @@ footer a {
     left: 50%; 
     transform: translate(-50%, -50%);  
     text-align: center;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
 }
 
 .logo {
