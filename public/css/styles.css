@@ -21,11 +21,11 @@ header {
     display: flex;
     top: 0;
     left: 0;
-    width: 100%;
     padding: 20px 48px;
     z-index: 1;
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
     transform: translateY(0);
+    width: 100%;
 }
 
 header.scroll {
@@ -45,7 +45,8 @@ h1 {
 h1 a {
     color: black;
     text-decoration: none;
-    transition: color 0.3s ease; 
+    text-shadow: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
 }
 
 h1 a:hover {
@@ -59,89 +60,43 @@ header.scroll h1 a:hover {
 }
 
 #star {
-    font-size: 33px;
+    font-size: 37px;
     position: absolute;  
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);  
     text-align: center;
     display: inline-block;
-    transition: color 0.3s ease-in-out; 
+    transition: color 0.3s ease-in-out;
 }
-
-#star:hover {
-    animation: starColours 3s infinite; 
-}
-
-/*
-@keyframes starColours {
-    0% {
-      color: first;
-    }
-    33% {
-      color: second;
-    }
-    66% {
-      color: third;
-    }
-    100% {
-      color: first;
-    }
-}
-*/
 
 nav ul {
     list-style-type: none;
     text-align: right;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 2.5px;
 }
 
 nav li {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 22px;
 }
 
 nav a {
     color: black;
+    text-shadow: none;
     position: relative; 
     text-decoration: none;
-    /* border-radius: 20px; */
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav a:hover {
-    color: black;
+    color: #E17D8B;
     text-shadow: 0 0 8px #FA6479;
-}
-
-/*
-nav a::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 125%;
-    height: 125%;
-    background-color: #E17D8B;
-    border-radius: 20px;
-    transform: translate(-50%, -50%) scale(0); 
-    transition: transform 0.3s ease; 
-    filter: blur(10px); 
-    z-index: -1; 
-}
-
-nav a:hover::after {
-    transform: translate(-50%, -50%) scale(1); 
-}
-
-header.scroll nav a:hover::after {
-    display: none; 
-}
-*/
-
-header.scroll nav a {
-    background: none; 
 }
 
 header.scroll nav a:hover {
@@ -152,6 +107,42 @@ header.scroll nav a:hover {
 header.scroll #star:hover {
     animation: starColours 3s infinite; 
 }
+
+.title, #star, .nav-container {
+    width: 33.33%;        
+}
+
+.title {
+    text-align: left;        
+}
+
+#star {
+    text-align: center;        
+}
+
+.nav-container {
+    text-align: right;
+}
+
+/* to be adjusted:
+@media only screen and (max-width: 768px) {
+    header {
+        display: flex; 
+        padding: 20px 30px; 
+    }
+    h1 {
+        font-size: 33px; 
+    }
+
+    #star {
+        font-size: 37px;
+    }
+
+    nav {
+        font-size: 22px;
+    }
+}
+*/
 
 main {
     padding: 50px;
@@ -177,7 +168,11 @@ body {
 }
 
 #home {
-    margin-top: 200px; 
+    margin-top: 175px; 
+}
+
+.welcome {
+    text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -212,24 +207,25 @@ body {
 
 .name {
     font-family: "Playfair Display", serif;
-    font-size: 65px;
-    font-weight: 800;
+    font-size: 75px;
+    font-weight: 900;
     margin: 0;
     background-image: linear-gradient(
         to right,
-        pink,
-        rgb(241, 211, 216),
-        rgb(240, 196, 204),
-        rgb(207, 172, 178),
-        pink
+        #642633,
+        #ba4b62,
+        #D18E97,
+        #ba4b62,
+        #642633
     );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    -webkit-background-clip: text;  
+    background-clip: text;          
+    color: transparent;             
+    user-select: text;             
     background-size: 200% auto;
     background-position: 0%;
-    animation: animatedName 3s linear infinite;
+    animation: animatedName 6s linear infinite;
+    text-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes animatedName {
