@@ -320,10 +320,17 @@ body {
 
 #top {
     background: transparent;
-    border-radius: 20px;
+    color: black;
     border-style: none;
     font-size: 22px;
     font-family: "Inconsolata", monospace;
+    transition: color 0.3s ease;
+}
+
+#top:hover {
+    color: #ECC8CC;
+    text-shadow: 0px 0px 2px #BE7B84, 2px 2px 20px #ECC8CC;
+    cursor: pointer;
 }
 
 footer {
