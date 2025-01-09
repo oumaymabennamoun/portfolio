@@ -322,7 +322,7 @@ body {
     background: transparent;
     border-radius: 20px;
     border-style: none;
-    font-size: 18px;
+    font-size: 22px;
     font-family: "Inconsolata", monospace;
 }
 
@@ -411,5 +411,20 @@ footer a {
     .interests {
         flex-direction: column;
         gap: 10px;
+    }
+
+    footer {
+        padding: 20px 30px;
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 65px;
+    }
+
+    .icons {
+        width: 27px;
+        height: 27px;
+        margin: 1px;
     }
 }
