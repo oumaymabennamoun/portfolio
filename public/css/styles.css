@@ -252,17 +252,10 @@ body {
     align-items: center; 
     gap: 50px;
 }
-
-.interests-icons {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    gap: 50px;
-}
   
 .box {
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center; 
     align-items: center; 
     text-align: center;
@@ -413,5 +406,10 @@ footer a {
 
     .name {
         font-size: 45px;
+    }
+
+    .interests {
+        flex-direction: column;
+        gap: 10px;
     }
 }
