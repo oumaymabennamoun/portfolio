@@ -124,26 +124,6 @@ header.scroll #star:hover {
     text-align: right;
 }
 
-/* to be adjusted:
-@media only screen and (max-width: 768px) {
-    header {
-        display: flex; 
-        padding: 20px 30px; 
-    }
-    h1 {
-        font-size: 33px; 
-    }
-
-    #star {
-        font-size: 37px;
-    }
-
-    nav {
-        font-size: 22px;
-    }
-}
-*/
-
 main {
     padding: 50px;
 }
@@ -274,6 +254,10 @@ body {
     padding: 5px;
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 #projects a {
@@ -282,14 +266,29 @@ body {
 }
 
 .project-1, .project-2 {
-    border: 1px solid black;
+    background-color: rgb(59, 59, 59, 0.08);
+    border: 1px solid #3b3b3b;
+    border-radius: 20px;
     padding: 10px;
     padding-top: 20px;
     margin: 20px;
+    width: 650px;
 }
 
 .projects-page {
     margin-top: 200px;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project-1-page {
     color: black;
     text-align: center;
     padding: 5px;
@@ -302,16 +301,47 @@ body {
     color: black;
 }
 
+#browse {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+#browse:hover {
+    color: #E17D8B;
+    text-shadow: 0 0 8px #FA6479;
+}
+
+#projlink1 {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+#projlink1:hover {
+    color: #E17D8B;
+    text-shadow: 0 0 8px #FA6479;
+}
+
+#projlink2 {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+#projlink2:hover {
+    color: #E17D8B;
+    text-shadow: 0 0 8px #FA6479;
+}
+
 .tags {
     color: rgb(0, 0, 0);
-    background-color: rgb(255, 130, 178, 0.1);
+    border: 2px solid black;
+    background: rgb(250, 100, 121, 0.15);
     border-radius: 20px;
-    padding: 10px;
-    padding-left: 15px;
+    padding: 7px;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     transition: transform 0.3s ease;
+    margin: 4px;
 }
 
 .tags:hover {
@@ -433,5 +463,9 @@ footer a {
         width: 27px;
         height: 27px;
         margin: 1px;
+    }
+
+    .project-1, .project-2 {
+        width: 300px;
     }
 }
