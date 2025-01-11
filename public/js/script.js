@@ -10,13 +10,12 @@ window.addEventListener("scroll", () => {
 
 const displayMessage = document.getElementById("message");
 
-const getQueryParameter = (param) => {
+const getQueryParams = (param) => {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(param);
-
 }
 
-const tag = getQueryParameter("tag");
+const tag = getQueryParams("tag");
 
 if (tag) {
     document.querySelectorAll("div[skills]").forEach(item => {
@@ -28,12 +27,13 @@ if (tag) {
             item.style.display = "none"; 
         }
     });
-    displayMessage.innerHTML = `Displaying projects that contain "${tag}". <a href="/projects">Browse all projects</a>.`;
+    displayMessage.innerHTML = `Displaying projects that contain "${tag}". <br> 
+    <a href="/projects" class="return" style="text-decoration: underline;">Return to all projects</a>.`;
 } else {
     document.querySelectorAll("div[skills]").forEach(item => {
         item.style.display = "block";
     });
-    displayMessage.textContent = `Displaying all projects.`;
+    displayMessage.innerHTML = `Browse all projects or filter by skills!`;
 }
 
 const backToTopButton = document.getElementById("top");

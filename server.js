@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
     fs.readFile(path.join(__dirname, "views", "index.html"), "utf-8", (err, content) => {
-        if (err) return res.status(500).send("Error loading site");
+        if (err) return res.status(500).send("Error loading portfolio");
         res.send(res.locals.header + content + res.locals.footer);
     });
 });

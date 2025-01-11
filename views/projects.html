@@ -1,26 +1,30 @@
-<div class="projects-page">
-    <div id="message"></div>
-    <br>
-    
+<div class="projects">
     <h2>projects</h2>
-    <p><a href="/projects" style="text-decoration: underline;" id="browse">Browse all projects</a> or filter by skills!</p>
+    <div id="message"></div>
 
-        <div class="project-1" skills="HTML,CSS,JavaScript,Node.js">
-            <a href="/my-portfolio" style="text-decoration: underline;" id="projlink1">My Portfolio</a>
-            <p>
-                <a href="/projects?tag=HTML" class="tags">HTML</a>
-                <a href="/projects?tag=CSS" class="tags">CSS</a>
-                <a href="/projects?tag=JavaScript" class="tags">JavaScript</a>
-                <a href="/projects?tag=Node.js" class="tags">Node.js</a>
-            </p>
-        </div>
+    <div class="project-1" skills="HTML,CSS,JavaScript,Node.js">
+        <a href="/my-portfolio" style="text-decoration: underline;" class="projlink">My Portfolio</a>
 
-        <div class="project-2" skills="Python,C">
-            <a href="/bioinformatics-problems" style="text-decoration: underline;" id="projlink2">Bioinformatics Problems</a>
-            <p>
-                <a href="/projects?tag=Python" class="tags">Python</a>
-                <a href="/projects?tag=C" class="tags">C</a>
-            </p>
-        </div>
-        <p>... and more to come soon :)</p>
+        <p>Project status: <span class="status-complete">Complete</i></span></p>
+
+        <p>Skills: 
+            <a href="/projects?tag=HTML" class="tags">HTML</a>
+            <a href="/projects?tag=CSS" class="tags">CSS</a>
+            <a href="/projects?tag=JavaScript" class="tags">JavaScript</a>
+            <a href="/projects?tag=Node.js" class="tags">Node.js</a>
+        </p>
+    </div>
+
+    <div class="project-2" skills="Python,C">
+        <a href="/bioinformatics-problems" style="text-decoration: underline;" class="projlink">Bioinformatics Problems</a>
+        
+        <p>Project status: <span class="status-progress">In progress</span></p>
+        
+        <p>Skills: 
+            <a href="/projects?tag=Python" class="tags">Python</a>
+            <a href="/projects?tag=C" class="tags">C</a>
+        </p>
+    </div>
+
+    <p>... and more to come soon :)</p>
 </div>
