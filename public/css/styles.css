@@ -269,11 +269,28 @@ body {
     color: black;
     transition: color 0.3s ease;
     font-weight: bold;
+    z-index: 2;
+    position: relative;
 }
 
 .projlink:hover {
     color: #E17D8B;
     text-shadow: 0 0 8px #FA6479;
+    z-index: 2;
+}
+
+.project-cursor {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    box-shadow: transparent;
+    z-index: 1;
+    opacity: 0; 
+    transition: opacity 0.1s linear;
 }
 
 .return {
@@ -297,10 +314,13 @@ body {
     text-align: center;
     transition: transform 0.3s ease;
     margin: 4px;
+    z-index: 2;
+    position: relative;
 }
 
 .tags:hover {
     transform: scale(1.1);
+    z-index: 2;
 }
 
 .status-complete {
@@ -313,6 +333,8 @@ body {
     display: inline-block;
     text-align: center;
     margin: 4px;
+    z-index: 2;
+    position: relative;
 }
 
 .status-progress {
@@ -325,6 +347,8 @@ body {
     display: inline-block;
     text-align: center;
     margin: 4px;
+    z-index: 2;
+    position: relative;
 }
 
 .project-page-1 {

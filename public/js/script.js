@@ -42,3 +42,32 @@ function backToTop() {
     document.body.scrollTop = 0; 
     document.documentElement.scrollTop = 0;
 }
+
+const cursor = document.createElement("div");
+cursor.classList.add("project-cursor");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
+
+const projects = document.querySelectorAll(".project-1, .project-2");
+
+projects.forEach((project) => {
+    project.addEventListener("mouseenter", (e) => {
+        cursor.style.opacity = 1;
+
+        if (project.classList.contains("project-1")) {
+            cursor.style.background = "rgba(144, 250, 102, 0.5)";
+            cursor.style.boxShadow = "0 0 10px rgba(144, 250, 102, 1), 0 0 20px rgba(144, 250, 102, 0.6)";
+        } else if (project.classList.contains("project-2")) {
+            cursor.style.background = "rgba(250, 197, 100, 0.5)"; 
+            cursor.style.boxShadow = "0 0 10px rgba(250, 197, 100, 1), 0 0 20px rgba(250, 197, 100, 0.6)";
+        }
+    });
+
+    project.addEventListener("mouseleave", () => {
+        cursor.style.opacity = 0;
+    });
+});
