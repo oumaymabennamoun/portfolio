@@ -33,7 +33,7 @@ if (tag) {
     document.querySelectorAll("div[skills]").forEach(item => {
         item.style.display = "block";
     });
-    displayMessage.innerHTML = `Browse all projects or filter by skills!`;
+    displayMessage.innerHTML = `Browse all projects or filter by skills & topics!`;
 }
 
 const backToTopButton = document.getElementById("top");
